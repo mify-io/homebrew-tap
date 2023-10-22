@@ -10,7 +10,7 @@ class Mify < Formula
 
   on_macos do
     url "https://github.com/chebykinn/mify/releases/download/v0.1.17/mify-darwin-all.tar.gz"
-    sha256 "48fa6f5e64928fda6763c20569cae1acd930806ba2a7e10a58ce9b14fb780eef"
+    sha256 "2c730f950bf72f44f0315e89d582eeec8e8dabfeb0c9e1f5d8a1ee7c389f1cde"
 
     def install
       bin.install "mify"
@@ -18,17 +18,17 @@ class Mify < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/chebykinn/mify/releases/download/v0.1.17/mify-linux-arm64.tar.gz"
-      sha256 "ad1dea1e09cb7ef8be0cbee631a6d74928a09bc291d0833aa992dba5a0842bbb"
+    if Hardware::CPU.intel?
+      url "https://github.com/chebykinn/mify/releases/download/v0.1.17/mify-linux-x86_64.tar.gz"
+      sha256 "00b74b568eb113abe1c2f6f016ff98d92b664173c0b69ca59be6c6bd0378f8f7"
 
       def install
         bin.install "mify"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/chebykinn/mify/releases/download/v0.1.17/mify-linux-x86_64.tar.gz"
-      sha256 "c97415c4ec11ff9842b955902c366d4a6f96dcd917333c99973c47e46e9bd468"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/chebykinn/mify/releases/download/v0.1.17/mify-linux-arm64.tar.gz"
+      sha256 "f222cd4769ea5a31460a8394e0516239848ba8b62f345ee6f110ddf475f8bb9d"
 
       def install
         bin.install "mify"
