@@ -5,12 +5,12 @@
 class Mify < Formula
   desc "Mify CLI - service infrastructure generator tool"
   homepage "https://mify.io/"
-  version "0.1.17"
+  version "0.1.18"
   license "Apache 2.0"
 
   on_macos do
-    url "https://github.com/mify-io/mify/releases/download/v0.1.17/mify-darwin-all.tar.gz"
-    sha256 "0002143d95648832e33764dee438e0e7708cdce62c9022f0f160495363fc23ac"
+    url "https://github.com/mify-io/mify/releases/download/v0.1.18/mify-darwin-all.tar.gz"
+    sha256 "307d640f79962fa5490083c3f84e96fb45e6cee10b596f3f9096e00b3922cfe1"
 
     def install
       bin.install "mify"
@@ -19,16 +19,16 @@ class Mify < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mify-io/mify/releases/download/v0.1.17/mify-linux-arm64.tar.gz"
-      sha256 "4ed3c8a9838c139c73c4a9f8d651e4d9cc8832aa7c040772f6189aa6a91a1b5c"
+      url "https://github.com/mify-io/mify/releases/download/v0.1.18/mify-linux-arm64.tar.gz"
+      sha256 "58df7b743334f867ad31891b0b100ab560594944a6c47aaa331d54fa23a6daac"
 
       def install
         bin.install "mify"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mify-io/mify/releases/download/v0.1.17/mify-linux-x86_64.tar.gz"
-      sha256 "cba554e85518bf605904c832a32e6320f88b2b13fd2b0908e70999aa39eab93b"
+      url "https://github.com/mify-io/mify/releases/download/v0.1.18/mify-linux-x86_64.tar.gz"
+      sha256 "d24555b83e125730f56719c5848f96686b4a5b15f9b3f32aedccf4e818d26f9b"
 
       def install
         bin.install "mify"
